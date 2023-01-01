@@ -1,0 +1,249 @@
+@charset "UTF-8";
+/* CSS Document */
+
+@import url('https://fonts.googleapis.com/css?family=Quicksand:400,700');
+
+.container {
+	margin: 0px auto;
+	padding: 0px;
+}
+body {
+	margin: 0px;
+	padding: 0px;
+}
+nav {
+   font-family: 'Quicksand', sans-serif;
+	overflow: hidden;
+	width: 100%;
+	background-color: #493722;
+	position: fixed;
+	top: 0;
+	z-index: 100;
+}
+nav ul {
+   height: 0;
+   overflow: hidden;
+   position: relative;
+   margin: 10px auto;
+}
+nav:hover ul {
+   height: auto;
+   padding: 0;
+}
+nav ul li {
+   list-style-type: none;
+   display: block;
+}
+nav ul li a {
+   display: block;
+   color: #FFF;
+   text-align: center;
+   padding: 14px 16px;
+   text-decoration: none;
+}
+nav ul li:hover {
+   background-color: #CF5502;
+}
+
+.menu-toggle {
+   display: block;
+   padding: 1em;
+   position: absolute;
+   top: .5em;
+   right: .5em;
+   cursor: pointer; /* this makes the menu toggle act as a link */
+}
+.hamburger, .hamburger::before, .hamburger::after {
+   content: '';
+   display: block;
+   background: #EBEBD3;
+   height: 3px;
+   width: 1.75em;
+   border-radius: 3px;
+   transition: all ease-in-out 500ms;
+}
+.hamburger::before {
+   transform: translateY(-6px);
+}
+.hamburger::after {
+   transform: translateY(3px);
+}
+
+.banner {
+	background-image: url(../images/banner1.jpg);
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+	height: 250px;
+	text-align: center;
+}
+.banner p {
+	font-family: Impact, Haettenschweiler, "Franklin Gothic Bold", "Arial Black", "sans-serif";
+	font-size: 45px;
+	color: #fff;
+	text-shadow: 1px 1px 2px #604439;
+	padding-top: 2.5em;
+}
+.banner p img {
+	-webkit-filter: drop-shadow(1px 1px 2px #222);
+	filter: drop-shadow(1px 1px 2px #222);
+	z-index: -100;
+}
+
+.right, .left {
+     color: #fff;
+     height: 220px;
+     text-align: center;
+     padding-top: 20px;
+     font-family: "Gill Sans", "Gill Sans MT", "Myriad Pro", "DejaVu Sans Condensed", Helvetica,
+     Arial, "sans-serif";
+}
+.right {
+	background-color: #CF5502;
+}
+.left {
+	background-image: url(../images/Cappuccino-hearts.jpg);
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+.right h3, .left h3 {
+	font-size: 1em;
+}
+.right h2, .left h2 {
+	font-size: 1.5em;
+	color: #fff;
+	text-shadow: 1px 1px 2px #000;
+}
+
+a.primary-button {
+	text-align: center;
+	margin: 0 auto;
+	width: 150px;
+	display: block;
+	padding: .8em;
+	border: 1px solid #fff;
+	border-radius: 30px;
+	color: #fff;
+	text-decoration: none;
+}
+a.primary-button:hover {
+	background-color: #fff;
+	color: #383838;
+}
+
+article {
+   clear: both;
+}
+
+article p, article h1, article h2, article h3, article h4, article h5, article h6, aside form {
+	padding: 0px 30px;
+}
+
+aside.form-box {
+     padding: 20px;
+     background-color: #EEE;
+}
+.form-box label {
+	font-family: Gotham, "Helvetica Neue", Helvetica, Arial, "sans-serif";
+	font-size: 14px;
+	text-transform: uppercase;
+}
+.form-box input {
+	width: 85%;
+	padding: 8px;
+	border-radius: 5px;
+	background-color: #fff;
+	outline: none;
+	border: none;
+}
+.form-box input#submit {
+	background-color: #383838;
+	color: #fff;
+	padding: 15px;
+	border: none;
+}
+.form-box input#submit:hover {
+	background-color: yellowgreen;
+}
+.form-box textarea {
+	width: 85%;
+	height: 150px;
+	padding: 8px;
+	border-radius: 10px;
+	border: none;
+	outline: none;
+}
+footer {
+	width: 100%;
+	background-color: #381A06;
+	clear: both;
+	text-align: center;
+	color: #fff;
+	padding: 20px 0px;
+}
+footer a {
+	color: #FFFFFF;
+}
+footer a:hover {
+	color: #CF5502;
+}
+
+
+@media screen and (min-width:768px){
+   /* TABLET */
+nav a img {
+	float: left;
+	padding: 8px 16px;
+}
+nav ul {
+   height: auto;
+   display: block;
+	float: right;
+	position: relative;
+	padding-right: 1em;
+}
+nav:hover ul {
+   height: auto;
+   padding-right: 1em;
+}
+nav ul li {
+	list-style-type: none;
+	display: inline-block;
+}
+nav ul li:hover {
+      background-color: #CF5502;
+}
+nav ul li a {
+	float: left;
+    display: block;
+    color: #FFF;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+/*nav ul li a:hover {
+	color: #CF5502;
+}*/
+.menu-toggle {display:none;}
+
+}
+
+@media screen and (min-width:1200px){
+   /* DESKTOP */
+   .right, .left {
+	width: 50%;
+	float: left;
+	position: relative;
+}
+   aside.form-box {
+	width: 30%;
+   padding: 0px;
+	float: right;
+	position: relative;
+}
+   article {
+	width: 70%;
+	float: left;
+}
+}
