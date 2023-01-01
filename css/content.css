@@ -1,0 +1,47 @@
+@charset "UTF-8";
+@import url("style.css");
+.video {
+     overflow: hidden;
+     position: relative;
+     width: 100%;
+}
+.video::after {
+     padding-top: 56.25%;
+     display: block;
+     content: '';
+}
+.video iframe {
+     position: absolute;
+     top: 0;
+     left: 0;
+     width: 100%;
+     height: 100%;
+}
+article {
+     padding: 20px;
+}
+aside.sidebar {
+     padding: 20px;
+     background-color: #EEE;
+}
+aside.sidebar img {
+     max-height: 100%;
+     max-width: 100%;
+}
+.gmap_canvas {
+     overflow: hidden;
+     background: none !important;
+     height: 100%;
+     width: 100%;
+}
+@media screen and (min-width:768px) {
+     /* TABLET */
+     article {
+          width: 60%;
+          float: left;
+     }
+     aside.sidebar {
+          float: right;
+          width: 30%;
+     }
+}
